@@ -63,7 +63,7 @@
       <height>801</height>
      </rect>
     </property>
-    <widget class="QTextEdit" name="textEdit">
+    <widget class="QTextEdit" name="T_text">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -73,7 +73,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="T_name">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -83,8 +83,57 @@
       </rect>
      </property>
     </widget>
+    <widget class="QPushButton" name="B_insert">
+     <property name="geometry">
+      <rect>
+       <x>1230</x>
+       <y>740</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>保存</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>1130</x>
+       <y>430</y>
+       <width>160</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="B_pre">
+        <property name="text">
+         <string>上一句</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="B_next">
+        <property name="text">
+         <string>下一句</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLineEdit" name="T_sentiment">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>470</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
-   <widget class="QListWidget" name="LW_dialouge">
+   <widget class="QListWidget" name="LW_dialogue">
     <property name="geometry">
      <rect>
       <x>1420</x>
