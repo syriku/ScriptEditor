@@ -7,6 +7,7 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+from .custom import MyTextEdit
 
 
 class Ui_ScriptEditor(object):
@@ -36,7 +37,7 @@ class Ui_ScriptEditor(object):
         self.widget = QtWidgets.QWidget(parent=self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(40, 160, 1331, 801))
         self.widget.setObjectName("widget")
-        self.T_text = QtWidgets.QTextEdit(parent=self.widget)
+        self.T_text = MyTextEdit(parent=self.widget)
         self.T_text.setGeometry(QtCore.QRect(150, 530, 1061, 231))
         self.T_text.setObjectName("T_text")
         self.T_name = QtWidgets.QLineEdit(parent=self.widget)
@@ -64,11 +65,14 @@ class Ui_ScriptEditor(object):
         self.LW_dialogue.setGeometry(QtCore.QRect(1420, 210, 256, 711))
         self.LW_dialogue.setObjectName("LW_dialogue")
         self.B_choice = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.B_choice.setGeometry(QtCore.QRect(1410, 180, 75, 23))
+        self.B_choice.setGeometry(QtCore.QRect(1420, 130, 75, 23))
         self.B_choice.setObjectName("B_choice")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
         self.label.setGeometry(QtCore.QRect(40, 140, 54, 12))
         self.label.setObjectName("label")
+        self.CB_scene = QtWidgets.QComboBox(parent=self.centralwidget)
+        self.CB_scene.setGeometry(QtCore.QRect(1420, 180, 171, 22))
+        self.CB_scene.setObjectName("CB_scene")
         ScriptEditor.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=ScriptEditor)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1727, 23))

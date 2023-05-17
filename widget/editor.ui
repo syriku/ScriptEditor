@@ -146,8 +146,8 @@
    <widget class="QPushButton" name="B_choice">
     <property name="geometry">
      <rect>
-      <x>1410</x>
-      <y>180</y>
+      <x>1420</x>
+      <y>130</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -167,6 +167,16 @@
     </property>
     <property name="text">
      <string>预览窗口</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="CB_scene">
+    <property name="geometry">
+     <rect>
+      <x>1420</x>
+      <y>180</y>
+      <width>171</width>
+      <height>22</height>
+     </rect>
     </property>
    </widget>
   </widget>
