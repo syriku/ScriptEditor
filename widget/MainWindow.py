@@ -25,6 +25,7 @@ class ScriptEditor(QMainWindow, Ui_ScriptEditor):
         if fname:
             print(f"test: 假裝完成了一次打開:{fname}")
             self.handler = Handler(fname[0])
+            self.update_scene()
 
     @pyqtSlot()
     def on_B_create_clicked(self):
@@ -50,7 +51,28 @@ class ScriptEditor(QMainWindow, Ui_ScriptEditor):
         print("test: 假裝完成了一次插入")
 
     @pyqtSlot()
-    def on_B_scene_clicked(self):
+    def on_B_scene_forward_clicked(self):
+        index = self.CB_scene.currentIndex()
+        self.handler.new_scene(self.LE_scene.text(), index, True)
+        self.update_scene(index + 1)
+
+    @pyqtSlot()
+    def on_B_scene_backward_clicked(self):
+        index = self.CB_scene.currentIndex()
+        self.handler.new_scene(self.LE_scene.text(), index, False)
+        self.update_scene(index)
+
+    def update_scene(self, index=0):
+        """更新场景列表LW_scene"""
+        self.CB_scene.blockSignals(True)
+        self.CB_scene.clear()
+        self.CB_scene.addItems(self.handler.data.keys())
+        self.CB_scene.setCurrentIndex(index)
+        self.CB_scene.blockSignals(False)
+
+    def update_dialogues(self):
+        """更新对话列表LW_dialogue"""
+        self.LW_dialogue.blockSignals(True)
         ...
 
 # if __name__ == '__main__':

@@ -10,3 +10,6 @@ class Dialogue(object):
     #     dialogue_str = "\n".join(self.dialogue)
     #     choices_str = "\n".join(self.choices)
     #     return f"Speaker: {self.speaker}\nDialogue: {dialogue_str}\nChoices: {choices_str}"
+    def __dict__(self):
+        """将数据打包为dict"""
+        return {"Speaker": self.speaker, "Dialogue": self.dialogue, "Choice": self.choices}

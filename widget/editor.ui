@@ -19,7 +19,7 @@
      <rect>
       <x>40</x>
       <y>60</y>
-      <width>321</width>
+      <width>395</width>
       <height>80</height>
      </rect>
     </property>
@@ -132,6 +132,19 @@
       </rect>
      </property>
     </widget>
+    <widget class="QPushButton" name="B_choice">
+     <property name="geometry">
+      <rect>
+       <x>1170</x>
+       <y>240</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>新建选项</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QListWidget" name="LW_dialogue">
     <property name="geometry">
@@ -141,19 +154,6 @@
       <width>256</width>
       <height>711</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="B_choice">
-    <property name="geometry">
-     <rect>
-      <x>1420</x>
-      <y>130</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>新建选项</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -179,6 +179,42 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="B_scene_forward">
+    <property name="geometry">
+     <rect>
+      <x>1580</x>
+      <y>150</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>向后插入</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_scene">
+    <property name="geometry">
+     <rect>
+      <x>1450</x>
+      <y>150</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="B_scene_backward">
+    <property name="geometry">
+     <rect>
+      <x>1580</x>
+      <y>120</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>向前插入</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -186,7 +222,7 @@
      <x>0</x>
      <y>0</y>
      <width>1727</width>
-     <height>23</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
