@@ -6,7 +6,7 @@ from .Dialogue import Dialogue
 class Scene(object):
 
     def __init__(self, name=None, script=None):
-        self.dialogues: Dict[Dialogue] = {}
+        self.dialogues: List[Dialogue] = []
         if name and not script:
             self.name = name
             return
@@ -21,12 +21,12 @@ class Scene(object):
         for dialogue in dialogues:
             dialogue_object = Dialogue(dialogue)
             # 如果两句台词的开头字符相同，会导致覆盖。可能会有问题
-            self.dialogues[dialogue_object.introduction] = dialogue_object
+            self.dialogues.append(dialogue_object)
         print(f"转换完成。{self.name}: {self.dialogues}")
 
     def __dict__(self):
         """将Scene对象打包为dict，便于转换成json字符串"""
-        dialogues = []
-        for _, dialogue in self.dialogues.items():
-            dialogues.append(dialogue.__dict__())
-        return {"Scene": self.name, "Dialogues": dialogues}
+        return {"Scene": self.name, "Dialogues": self.dialogues}
+
+    def list_dialogues(self):
+        ...

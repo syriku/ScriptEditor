@@ -93,7 +93,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>保存</string>
+      <string>保存对话</string>
      </property>
     </widget>
     <widget class="QWidget" name="verticalLayoutWidget">
